@@ -1,17 +1,24 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
-    <img src="./assets/hero-light.svg" alt="DRUID GTM Mission Control turning fragmented GTM evidence into one canonical account picture and a human-owned next move" width="100%">
-  </picture>
-</p>
-
 <div align="center">
 
 # DRUID GTM Mission Control
 
-### **An account-centric, evidence-backed GTM operating system**
+### **The account-level decision layer between website activity and GTM action**
 
-**Observe → Understand → Decide → Act → Learn**
+**Know which accounts are moving—and whether marketing or sales should act next.**
+
+</div>
+
+<p align="center">
+  <img src="./assets/mission-control-loop.gif" alt="Animated Mission Control journey from paid and organic website activity through identity resolution, account understanding, ICP evaluation, a human-approved marketing or sales decision, and result capture" width="100%">
+</p>
+
+Mission Control takes behavioral signals from paid and organic website traffic, keeps the campaign, source and content context attached, and resolves the company or person behind the activity when the evidence supports it. It then combines that behavior with activity from other people at the same organization, CRM context and research to build one current account picture.
+
+That account—not an isolated click or lead—is evaluated against a versioned ICP and current intent evidence. Mission Control recommends the next appropriate move for marketing or sales, a person decides whether it should happen, and the result becomes part of the account history.
+
+**It is not scoring one visit and calling it buying intent. It is turning multiple pieces of evidence into an explainable account-level decision.**
+
+<div align="center">
 
 *Working internal product designed and built by [Mihail Lupu](https://github.com/MLupu88). Public portfolio presentation using synthetic data and sanitized visuals.*
 
@@ -19,17 +26,13 @@
 
 ---
 
-## Why I built it
+## The missing layer between traffic and action
 
-The GTM stack was producing more signals than ever and still leaving the hardest question unanswered:
+Website analytics could show that traffic increased. Campaign platforms could show which message or asset earned a click. De-anonymization could sometimes identify a visitor or company. HubSpot could show what sales already knew. Yet the operator still had to assemble those fragments manually before answering the question that mattered:
 
 > **What is actually happening at this account, and what should we do about it now?**
 
-Campaign performance lived in analytics. Contacts and opportunities lived in HubSpot. Identified website activity arrived from another provider. Research, ICP judgment and operator context lived somewhere else again. Each system could describe its own fragment, but the person expected to act still had to reconstruct the account by hand.
-
-Mission Control grew around that gap.
-
-It is an **account-centric decision system** that turns fragmented GTM evidence into one current account picture: what changed, why it matters, whether the account is worth pursuing, what is still unknown, what the system recommends, what a person chose and what happened afterward.
+Mission Control grew around that gap. It connects campaign and content context to identifiable behavior, groups supported activity around the canonical account, evaluates the resulting account against the appropriate ICP and turns that assessment into work. Strong fit and meaningful intent may call for sales review, an owner alert or prepared outreach. Earlier or incomplete evidence may call for marketing nurture, research, retargeting or simply watching the account. No action is also a legitimate decision.
 
 It is not a CRM replacement, a lead-scoring dashboard or an AI layer performing confidence over messy data. **The account is the center of the model—not the event, the lead or the vendor that produced it.**
 
@@ -57,7 +60,7 @@ The operator does not begin with ingestion health or a wall of metrics. The Dail
   <img src="./assets/operator-journey.svg" alt="A four-scene operator journey from Daily Brief to account understanding, human decision and confirmed result" width="100%">
 </p>
 
-Opening an account reveals the commercial story behind the movement: current company and CRM truth, verified people, recent activity, campaign context, ICP assessment, missing evidence and the provenance behind each claim. The operator can move the work forward without losing the reasoning that got it there.
+Opening an account reveals the commercial story behind the movement: current company and CRM truth, verified people across the organization, recent activity, campaign and content context, ICP assessment, missing evidence and the provenance behind each claim. The official evaluation uses the relevant published ICP version; another profile can be tested as a preview without quietly replacing production truth.
 
 The queues follow the job in front of the person—**decide, prepare, research or watch**—rather than asking them to translate another abstract score into work.
 
@@ -87,7 +90,7 @@ Campaign and UTM context therefore travel separately with identifiable behaviora
   <img src="./assets/campaign-account-outcome.svg" alt="A synthetic view of GA4 aggregate traffic alongside campaign-linked account evidence and a Mission Control decision" width="100%">
 </p>
 
-The product direction is to carry a campaign beyond top-of-funnel reporting: **which known leads and accounts arrived, which became active, what Mission Control recommended, what a person chose and which outcomes were later confirmed**.
+The product direction is to carry a campaign beyond top-of-funnel reporting: **which known leads and accounts arrived, which assets they engaged with, how interest accumulated across the organization, which ICP they fit, what Mission Control recommended, what a person chose and which outcomes were later confirmed**.
 
 This is not an attempt to force anonymous GA4 sessions into named accounts or claim universal multi-touch attribution. Aggregate performance and account-bound evidence stay distinct until identity and provenance can support the connection.
 
