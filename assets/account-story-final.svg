@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-label="An account story becoming clearer as evidence accumulates">
+<defs>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#00130a" flood-opacity=".10"/></filter>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22c55e"/><stop offset="1" stop-color="#35d6a0"/></linearGradient>
+  <style>
+    text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#f3f8f5}
+    .muted{fill:#9db0a5} .green{fill:#22c55e} .amber{fill:#f4b942} .blue{fill:#67b7f7} .red{fill:#fb7185}
+    .label{font-size:14px;font-weight:700;letter-spacing:1.5px} .small{font-size:15px} .body{font-size:18px} .h3{font-size:21px;font-weight:700}.h2{font-size:30px;font-weight:750}.h1{font-size:46px;font-weight:780}
+  </style>
+</defs>
+<rect width="100%" height="100%" fill="#07110d"/>
+
+    <text x="80" y="76" class="label green">ONE ACCOUNT STORY</text><text x="80" y="124" class="h2">Evidence arrives in fragments. The account should not.</text>
+    <path d="M352 194C520 194 520 246 635 246M352 344C520 344 520 294 635 294M1228 194C1080 194 1080 246 965 246M1228 344C1080 344 1080 294 965 294" fill="none" stroke="#244032" stroke-width="3" stroke-dasharray="8 10"/>
+    <g opacity="1"><rect x="118" y="136" width="254" height="112" rx="18" fill="#10231a" stroke="#67b7f7"/><circle cx="148" cy="167" r="8" fill="#67b7f7"/><text x="169" y="174" class="h3">Campaign touch</text><text x="148" y="212" class="small muted">UTM · LinkedIn</text></g><g opacity="1"><rect x="118" y="286" width="254" height="112" rx="18" fill="#10231a" stroke="#22c55e"/><circle cx="148" cy="317" r="8" fill="#22c55e"/><text x="169" y="324" class="h3">Website behavior</text><text x="148" y="362" class="small muted">Pricing + integration</text></g><g opacity="1"><rect x="1228" y="136" width="254" height="112" rx="18" fill="#10231a" stroke="#22c55e"/><circle cx="1258" cy="167" r="8" fill="#22c55e"/><text x="1279" y="174" class="h3">Identity resolved</text><text x="1258" y="212" class="small muted">Company + person</text></g><g opacity="1"><rect x="1228" y="286" width="254" height="112" rx="18" fill="#10231a" stroke="#f4b942"/><circle cx="1258" cy="317" r="8" fill="#f4b942"/><text x="1279" y="324" class="h3">CRM context</text><text x="1258" y="362" class="small muted">Owner + open deal</text></g>
+    <rect x="635" y="168" width="330" height="248" rx="26" fill="#0d1b15" stroke="#22c55e" stroke-width="2" filter="url(#shadow)"/>
+    <text x="673" y="213" class="label green">CANONICAL ACCOUNT</text><text x="673" y="258" class="h2">Northstar Health</text><text x="673" y="287" class="small muted">northstar.example</text>
+    <rect x="673" y="316" width="104" height="30" rx="15" fill="#22c55e" opacity=".13" stroke="#22c55e"/><text x="687" y="336" font-size="14" font-weight="650" fill="#22c55e">Active</text><rect x="792" y="316" width="132" height="30" rx="15" fill="#67b7f7" opacity=".13" stroke="#67b7f7"/><text x="806" y="336" font-size="14" font-weight="650" fill="#67b7f7">1 person</text>
+    <text x="673" y="382" class="small ">Owner: Jordan Lee · Open opportunity</text>
+    <rect x="80" y="478" width="1440" height="88" rx="20" fill="#143824" stroke="#22c55e"/>
+    <text x="112" y="514" class="label green">CURRENT INTERPRETATION</text><text x="112" y="548" class="body">Strong fit · High intent · Recommendation: review for targeted outreach</text>
+    <text x="1280" y="544" class="small muted">5 / 5 evidence stages</text>
+</svg>
