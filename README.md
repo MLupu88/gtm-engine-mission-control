@@ -1,212 +1,224 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
+    <img src="./assets/hero-light.svg" alt="DRUID GTM Mission Control turning fragmented GTM evidence into one canonical account picture and a human-owned next move" width="100%">
+  </picture>
+</p>
+
 <div align="center">
 
 # DRUID GTM Mission Control
 
-### The account-centric GTM engine behind a clearer answer to: *what deserves our attention now?*
+### **An account-centric, evidence-backed GTM operating system**
 
-An internal product initiative designed and built by **Mihail Lupu** to turn fragmented GTM evidence into one current account picture, an explainable recommendation and a human-owned next move.
+**Observe → Understand → Decide → Act → Learn**
+
+*Working internal product designed and built by [Mihail Lupu](https://github.com/MLupu88). Public portfolio presentation using synthetic data and sanitized visuals.*
 
 </div>
 
-<br />
+---
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-  <img alt="A synthetic DRUID Mission Control Daily Brief showing account movement, accounts needing attention and the evidence behind current recommendations" src="assets/hero-light.svg">
-</picture>
+## Why I built it
 
-<p align="center"><sub>Public portfolio composition using synthetic companies and activity. No customer or production data is shown.</sub></p>
+The GTM stack was producing more signals than ever and still leaving the hardest question unanswered:
 
-## The problem was never a lack of signals
+> **What is actually happening at this account, and what should we do about it now?**
 
-A modern GTM team can see website sessions in analytics, contacts and opportunities in its CRM, anonymous-company activity in a de-anonymization tool, campaign responses in another system and research somewhere else entirely. Each tool can accurately describe its own fragment while nobody can confidently describe the account.
+Campaign performance lived in analytics. Contacts and opportunities lived in HubSpot. Identified website activity arrived from another provider. Research, ICP judgment and operator context lived somewhere else again. Each system could describe its own fragment, but the person expected to act still had to reconstruct the account by hand.
 
-That leaves the operator doing the difficult work manually: deciding whether five records refer to the same company, working out what changed, separating actual buying evidence from ordinary CRM state, checking whether the company fits the ICP, finding a real person to contact and remembering what happened after someone acted.
+Mission Control grew around that gap.
 
-Mission Control exists to make that account-level reasoning explicit. It is not a CRM replacement and it is not another dashboard that puts a score beside every company. It is an operating system for moving from messy evidence to an accountable GTM decision.
+It is an **account-centric decision system** that turns fragmented GTM evidence into one current account picture: what changed, why it matters, whether the account is worth pursuing, what is still unknown, what the system recommends, what a person chose and what happened afterward.
 
-## One account, even when the evidence arrives in pieces
-
-The system treats the canonical account—not the lead, event or provider—as the durable unit of context. New evidence can make the story clearer, reveal a conflict or leave an important question unanswered. It should never silently create certainty.
-
-![An animated account story in which campaign activity, website behavior, identity and CRM context accumulate around one canonical account](assets/account-story.gif)
-
-A campaign touch does not become a person merely because that would be convenient. A company property does not become intent because it came from a CRM. A research finding does not become confirmed account truth because an AI produced a plausible sentence. Mission Control keeps these things related without pretending they are interchangeable.
-
-## What using it feels like
-
-The operator starts with a Daily Brief rather than an ingestion dashboard. It shows which canonical accounts moved during the selected period, what they did, which campaign or source context travelled with the activity and whether the current evidence changes what deserves attention.
-
-From there, the workflow is intentionally human:
-
-1. **See what changed.** Account-bound behavioral activity is reconciled into a time-based view. Raw capture volume is available, but it does not get to masquerade as account movement.
-2. **Open the account story.** The operator sees why the account matters now, current company and CRM truth, people, activity, assessment, missing context and the evidence behind each claim.
-3. **Inspect the recommendation.** Mission Control proposes a posture and next move using a deterministic, versioned policy. It also shows its reasons, blockers and confidence.
-4. **Apply judgment.** The operator accepts, modifies or rejects the recommendation and records why. That response is tied to the exact recommendation version it answered.
-5. **Prepare the work.** An accepted next step can produce a grounded email, LinkedIn draft or call brief. Recipient checks and prospect-safety rules prevent the system from guessing a person or exposing surveillance language.
-6. **Approve the boundary.** Preparation, approval, execution handoff and provider-confirmed execution remain separate states.
-7. **Keep the result.** Decisions, actions, outcomes, cost status and reporting limitations become part of the operating history.
-
-## The system recommends. The operator decides.
-
-![A synthetic account decision surface with the current account state, an explainable recommendation, missing context and explicit human decision controls](assets/decision-surface.svg)
-
-Recommendations are deliberately not an LLM improvising a next step. They are a versioned projection over current account truth, production evaluation, verified people and unresolved attention items.
-
-That distinction matters. If the evidence changes, the recommendation fingerprint changes too; an old approval cannot quietly satisfy a new recommendation. If a contact cannot be verified, Mission Control will not guess an email address. If the safest answer is research, watch or no action, those are valid outcomes rather than conversion failures.
-
-This is also why the product does not create a grand autonomous “Action” object and declare victory. The current Actions workspace groups accounts by the job in front of the operator:
-
-| Operator job | What it means |
-| --- | --- |
-| **Needs my decision** | A current recommendation or unresolved review item still needs human judgment. |
-| **Ready for the next step** | The operator answered the recommendation and a safe preparation step is available. |
-| **Research needed** | The account may be relevant, but the evidence is not sufficient for responsible outreach. |
-| **Waiting / watching** | Nothing needs to happen now, or the operator explicitly chose not to act. |
-
-## Campaign tracking and GA4 answer different questions
-
-GA4 is useful because it measures aggregate website traffic across both anonymous and known visitors. It can answer whether a campaign created reach, sessions and engagement. It cannot, by itself, provide One Account Truth.
-
-Mission Control therefore keeps two views deliberately separate:
-
-- **GA4 remains the source of truth for aggregate traffic and campaign performance.**
-- **Campaign and UTM context travels with identifiable behavioral evidence** when that evidence can be defensibly associated with a lead, person or canonical account.
-
-![A synthetic visual showing GA4 aggregate campaign traffic alongside campaign-linked account evidence and a Mission Control decision](assets/campaign-account-outcome.svg)
-
-The next product step is to deepen this connection so a campaign can be followed beyond top-of-funnel traffic: which leads and accounts arrived, which became active, what the system recommended, what a human chose to do and which outcomes were later confirmed.
-
-This does **not** mean forcing anonymous GA4 sessions into named accounts or claiming multi-touch attribution that the evidence cannot support. It means carrying real campaign context forward when identity becomes known, while preserving the boundary between aggregate analytics and account-level evidence.
-
-## Account understanding has layers
-
-An account page is organized around the operator’s commercial questions, not around the database tables underneath it.
-
-| Question | Product surface |
-| --- | --- |
-| **Why does this account matter now?** | A current account narrative grounded in recent movement, assessment and unresolved attention. |
-| **What do we actually know?** | Canonical company and CRM truth, manual confirmations, agreement, conflict and provenance. |
-| **Who do we know?** | Verified people, their available contact paths and selected acquisition context. |
-| **Is it worth pursuing?** | Versioned ICP evaluation across Fit, Intent, identity, ability to act and eligibility. |
-| **What changed?** | A chronological account activity view with source, campaign, page and timestamp context. |
-| **What is missing?** | Unknown fields, blockers, stale evidence and research questions remain visible. |
-| **What should happen next?** | An explainable recommendation followed by explicit human response controls. |
-
-The operator can also test an account against another ICP, but the preview remains separate from the official production evaluation. This makes exploration possible without rewriting operational truth.
-
-## One Account Truth is a behavior, not a slogan
-
-Provider data enters the system as atomic observations with provenance. Identity evidence is used to bind those observations to an account. Comparable firmographic and CRM candidates can then be reconciled into current truth using explicit source authority, confidence and timestamp rules.
-
-When sources agree, the agreement remains visible. When they conflict, the winning evidence and conflicting evidence remain visible. A current operator-confirmed fact has explicit authority, but its history is immutable rather than overwritten.
-
-The same restraint appears in the UI:
-
-- **Not configured** is different from **not evaluated**.
-- **Unknown** is different from **no**.
-- Missing behavioral coverage is unavailable, not zero.
-- CRM ownership is not intent.
-- Research is evidence, not automatically fact.
-- A recommendation is not authorization.
-- A handoff is not a confirmed result.
-
-## The loop continues after the decision
-
-![A synthetic campaign report with account decisions and outcomes, plus PDF and operational CSV outputs](assets/reporting-outputs.svg)
-
-Mission Control can assemble a campaign-period view spanning accounts requiring attention, recommendations, human decisions, actions, outcomes, cost status, attribution coverage and explicit data limitations. The same operating context supports two different outputs:
-
-- a readable PDF for leadership and campaign review;
-- an operational CSV for downstream execution or analysis, including the reporting period and record type on every row.
-
-LinkedIn execution currently remains a supervised export-and-import workflow. Mission Control can prepare the approved rows; a person exports the CSV and imports it into Dripify. The product does not claim that an external platform received, delivered or completed an action until there is evidence that it did.
-
-## What AI contributes
-
-AI is useful here, but it is not the product’s source of authority.
-
-DeepSeek currently supports two bounded interpretation jobs: an on-demand Account Brain analysis and a summary of the selected reporting period. Both operate over evidence the system already has. They do not resolve identity, promote canonical truth, perform the official ICP evaluation, decide recommendation policy or authorize execution.
-
-This division is intentional. Language models are good at compressing a complicated account history into something a person can read. Deterministic policy, immutable history and explicit human approval are better foundations for deciding what the business is allowed to do next.
-
-## Connected to the real GTM stack
-
-The product is already connected to operational systems rather than being a static prototype.
-
-| System | Current role in Mission Control |
-| --- | --- |
-| **HubSpot** | Read-only company and contact identity, firmographics, CRM state, ownership, opportunity and selected acquisition context. |
-| **RB2B** | Identifiable website activity and person/company resolution, orchestrated through n8n. |
-| **Client Radar** | On-demand company research with persisted request state, returned evidence and completed-result inspection. |
-| **GA4** | Aggregate website and campaign traffic, intentionally separate from named-account activity. |
-| **Google Sheets** | Transitional campaign-reporting and operational interchange surface. |
-| **n8n** | Production ingestion and orchestration around external signals and context refresh. |
-| **Tavily** | Restricted ingestion of DRUID’s own public product material for reviewed product knowledge. |
-| **Clawd** | Separate consumer of immutable, explicitly approved execution handoffs. |
-
-The provider model is open by design, but a name appearing in a future-provider vocabulary is not the same as a live integration. Dealfront, Cognism, PostHog, Salesforge and broad autonomous channel execution are not presented here as current capabilities.
-
-## Under the product surface
-
-Only after the human workflow is clear does the architecture become useful.
-
-![A designed technical lifecycle showing evidence, identity, truth, assessment, recommendation, human decision and confirmed result as separate transformations](assets/truth-lifecycle.svg)
-
-The implementation is a TypeScript monorepo with a React/Vite operator workspace, an Express API, PostgreSQL with Drizzle, pure identity/observation/evaluation packages and append-only operational ledgers.
-
-Several design choices carry most of the technical weight:
-
-- provider-specific payloads stop at adapters; the observation and reconciliation core is provider-neutral;
-- idempotency and identity resolution are deterministic rather than probabilistic guesses;
-- production evaluations persist the exact evidence snapshot and evaluator version they used;
-- recommendations are computed from current canonical state using a named policy version;
-- operator responses are append-only and tied to a recommendation fingerprint;
-- approval freezes provenance into an immutable execution handoff;
-- Postgres constraints and triggers enforce important lifecycle and immutability rules beneath the application layer;
-- browser-session routes, signal-ingestion routes and execution-consumer routes use separate authorization boundaries.
-
-## What is implemented—and what is still being built
-
-Mission Control is a working internal product in active development, not a finished commercial platform.
-
-**Implemented today**
-
-- canonical accounts, aliases, people and account-bound observations;
-- provider-neutral evidence classes and deterministic fact reconciliation;
-- HubSpot, RB2B, Client Radar and GA4 integration paths;
-- editable, versioned ICP profiles and explainable production evaluations;
-- Daily Brief, account movement, Accounts, Needs Attention and Account investigation;
-- deterministic recommendations and persisted operator responses;
-- operator Actions workspace and grounded message/call preparation;
-- explicit approval and immutable execution handoffs;
-- campaign reporting, operational CSV, LinkedIn CSV and PDF export;
-- reviewed DRUID product knowledge and on-demand AI summaries.
-
-**Now being deepened**
-
-- campaign-to-lead and campaign-to-account tracking alongside GA4;
-- stronger continuity from identifiable campaign touch through decision, action and outcome;
-- completion of the supervised action-and-feedback loop across external providers;
-- clearer leadership reporting over the canonical operating model.
-
-**Deliberately not claimed**
-
-- a mature first-class Campaign Setup domain;
-- universal attribution across anonymous traffic;
-- autonomous outbound;
-- research automatically promoted to truth;
-- every planned data provider already connected.
-
-## Why this project is in my portfolio
-
-I started Mission Control because the operating problem was familiar: companies buy increasingly capable GTM tools, but the person responsible for acting still has to reconstruct the truth by hand.
-
-The project let me work across the full product problem rather than stopping at a concept deck. I defined the product thesis and information architecture, designed the evidence and account model, shaped the evaluation and recommendation behavior, built the human-control workflow, connected real systems, implemented the product and kept revisiting the uncomfortable edge cases where software is tempted to sound more certain than the data allows.
-
-That combination is what I wanted to demonstrate here: product and GTM judgment, enough technical depth to make the model real, and the discipline to design around what the system can actually prove.
+It is not a CRM replacement, a lead-scoring dashboard or an AI layer performing confidence over messy data. **The account is the center of the model—not the event, the lead or the vendor that produced it.**
 
 ---
 
-<sub>This repository is a sanitized portfolio case study, not the operational source distribution and not official DRUID product documentation. Visuals use synthetic companies, people, campaign names, activity and metrics. DRUID and related marks belong to their respective owner.</sub>
+## One account, even when the evidence arrives in pieces
+
+A campaign touch, a return visit, an identified person, a company property and an open opportunity may all describe the same commercial story. They are not automatically the same kind of truth.
+
+<p align="center">
+  <img src="./assets/account-story.gif" alt="An animated account story in which campaign activity, website behavior, identity and CRM context accumulate around one canonical account" width="100%">
+</p>
+
+Mission Control keeps the source and timestamp of each observation, resolves identity explicitly and reconciles comparable facts before they become the current account picture. New evidence can strengthen the story, expose a conflict or leave an important question unanswered. Missing context is allowed to remain missing.
+
+That is the structural difference. The product does not simply collect signals. It gives them somewhere durable to accumulate and rules for becoming operationally useful.
+
+---
+
+## A morning in Mission Control
+
+The operator does not begin with ingestion health or a wall of metrics. The Daily Brief begins with movement: which canonical accounts changed, what caused the change and which ones now need a decision.
+
+<p align="center">
+  <img src="./assets/operator-journey.svg" alt="A four-scene operator journey from Daily Brief to account understanding, human decision and confirmed result" width="100%">
+</p>
+
+Opening an account reveals the commercial story behind the movement: current company and CRM truth, verified people, recent activity, campaign context, ICP assessment, missing evidence and the provenance behind each claim. The operator can move the work forward without losing the reasoning that got it there.
+
+The queues follow the job in front of the person—**decide, prepare, research or watch**—rather than asking them to translate another abstract score into work.
+
+---
+
+## The system recommends. The operator decides.
+
+<p align="center">
+  <img src="./assets/decision-surface.svg" alt="A synthetic account decision surface with current account state, an explainable recommendation, missing context and explicit human decision controls" width="100%">
+</p>
+
+Recommendations are versioned projections over current account truth, production ICP evaluation, verified people and unresolved review items. They show the proposed posture, supporting reasons, blockers, confidence and the next safe step.
+
+The operator accepts, modifies or rejects that recommendation and records why. The response remains tied to the exact recommendation version it answered, so changed evidence cannot quietly inherit an old approval.
+
+An accepted next move can prepare a grounded email, LinkedIn draft or call brief. Preparation, approval, execution handoff and provider-confirmed execution remain separate states. If a real recipient cannot be verified, Mission Control does not invent one. Research, watch and no action are valid decisions too.
+
+---
+
+## Campaign tracking and GA4 answer different questions
+
+GA4 is the source of truth for aggregate website traffic: reach, sessions, users and engagement across anonymous and known visitors. It cannot, by itself, create One Account Truth.
+
+Campaign and UTM context therefore travel separately with identifiable behavioral evidence when that evidence can be defensibly associated with a lead, person or canonical account.
+
+<p align="center">
+  <img src="./assets/campaign-account-outcome.svg" alt="A synthetic view of GA4 aggregate traffic alongside campaign-linked account evidence and a Mission Control decision" width="100%">
+</p>
+
+The product direction is to carry a campaign beyond top-of-funnel reporting: **which known leads and accounts arrived, which became active, what Mission Control recommended, what a person chose and which outcomes were later confirmed**.
+
+This is not an attempt to force anonymous GA4 sessions into named accounts or claim universal multi-touch attribution. Aggregate performance and account-bound evidence stay distinct until identity and provenance can support the connection.
+
+---
+
+## The GTM stack keeps its job. The account gains a memory.
+
+Mission Control is connected to operational systems, but it does not flatten them into a row of interchangeable “integrations.” Each one contributes a specific kind of context or receives a specific kind of approved output.
+
+<p align="center">
+  <img src="./assets/gtm-stack.svg" alt="Recognizable GTM systems including HubSpot, RB2B, Google Analytics, Google Sheets, n8n and LinkedIn arranged around one canonical account" width="100%">
+</p>
+
+HubSpot remains the CRM. Google Analytics remains the aggregate traffic authority. RB2B contributes identifiable activity. Client Radar contributes research evidence. n8n orchestrates ingestion and refresh. LinkedIn execution remains a supervised handoff rather than an invisible autonomous action.
+
+<details>
+<summary><strong>Current integration roles</strong></summary>
+
+| System | Current role in Mission Control |
+| --- | --- |
+| **HubSpot** | Read-only company and contact identity, firmographics, CRM state, ownership, opportunities and selected acquisition context. |
+| **RB2B + n8n** | Identifiable website activity, person/company resolution and production ingestion orchestration. |
+| **Client Radar** | On-demand company research with persisted requests, returned evidence and completed-result inspection. |
+| **Google Analytics 4** | Aggregate website and campaign traffic, intentionally separate from named-account activity. |
+| **Google Sheets** | Transitional campaign-reporting and operational interchange. |
+| **Tavily** | Restricted ingestion of DRUID’s own public material for reviewed product knowledge. |
+| **DeepSeek** | Bounded Account Brain and selected-period interpretation over controlled evidence. |
+| **LinkedIn / Dripify** | Supervised export-and-import workflow for approved outreach rows. |
+| **Clawd** | Separate consumer of immutable, explicitly approved execution handoffs. |
+
+</details>
+
+Provider neutrality does not mean pretending every provider is already connected. Dealfront, Cognism, PostHog, Salesforge and broad autonomous channel execution are not presented here as current capabilities.
+
+---
+
+## AI makes the history readable. It does not decide the truth.
+
+Mission Control currently gives AI two jobs where language is genuinely useful.
+
+The **Account Brain** compresses a complicated account history into a readable explanation of why the account matters now. The **Period Brief** summarizes what changed across the selected reporting window. Both work over evidence the system already has and point the operator back toward that evidence.
+
+<p align="center">
+  <img src="./assets/ai-role.svg" alt="Mission Control AI turning controlled account evidence into an Account Brain explanation and a reporting-period brief while deterministic systems retain authority" width="100%">
+</p>
+
+The model does not resolve identity, promote observations into canonical truth, perform the official ICP evaluation, choose recommendation policy or authorize execution. In practical terms: **AI reduces the reading burden; it does not acquire decision rights.**
+
+---
+
+## The loop does not end at outreach
+
+Decisions, actions and outcomes become part of the account’s operating history rather than disappearing into another tool after the click.
+
+<p align="center">
+  <img src="./assets/reporting-outputs.svg" alt="A synthetic campaign report with account decisions and outcomes plus PDF and operational CSV outputs" width="100%">
+</p>
+
+Mission Control can assemble a campaign-period view spanning accounts requiring attention, recommendations, human decisions, actions, outcomes, cost status, attribution coverage and explicit data limitations. The same operating context can become a readable PDF for leadership or an operational CSV for execution and analysis.
+
+The useful point is not the file format. **Reporting becomes an output of operating the system instead of a second account story rebuilt for the meeting.**
+
+---
+
+## Under the product surface
+
+The implementation is a TypeScript monorepo with a React/Vite operator workspace, an Express API, PostgreSQL with Drizzle, explicit contracts and pure packages for identity, observations, reconciliation and evaluation.
+
+<p align="center">
+  <img src="./assets/truth-lifecycle.svg" alt="The evidence lifecycle from provider observation through identity, canonical truth, assessment, recommendation, human decision and confirmed result" width="100%">
+</p>
+
+The important technical decisions are the boundaries, not the framework names:
+
+- provider-specific payloads stop at adapters;
+- identity resolution and idempotency are deterministic;
+- production evaluations retain the evidence snapshot and evaluator version they used;
+- recommendations have a named policy version and a stable fingerprint;
+- operator responses and execution handoffs are append-only;
+- database constraints protect important lifecycle and immutability rules beneath the UI;
+- browser, ingestion and execution-consumer routes have separate authorization boundaries.
+
+Observation is not truth. Assessment is not recommendation. Recommendation is not authorization. Handoff is not a confirmed result. The product remains useful because those distinctions survive the full workflow.
+
+---
+
+## A working product with a clear frontier
+
+Mission Control is already a working internal product, not a static concept prototype. The account model, evidence lifecycle, ICP evaluation, deterministic recommendations, operator decisions, grounded preparation, explicit handoffs and reporting outputs form the current operating spine.
+
+<p align="center">
+  <img src="./assets/product-frontier.svg" alt="The operating Mission Control product spine, the campaign and feedback loop being deepened, and the capabilities deliberately not claimed" width="100%">
+</p>
+
+The active frontier is continuity: following defensible campaign context into a known lead and account, then carrying the human decision through approved execution to a confirmed outcome. That is where the product becomes more than a better prioritization surface—it becomes a learning GTM operating loop.
+
+---
+
+## Why this is in my portfolio
+
+<table>
+<tr>
+<td width="150" valign="top">
+  <img src="https://github.com/MLupu88.png?size=240" alt="Mihail Lupu" width="126">
+</td>
+<td valign="top">
+
+### Mihail Lupu
+
+I work in product marketing and have spent more than a decade around automation, conversational AI and generative AI. I also teach design thinking for GenAI at the Bucharest University of Economic Studies.
+
+I built Mission Control because I wanted to get past the easy version of the GTM story. “Connect the data, score the account, let AI recommend an action” sounds convincing until identity is uncertain, sources disagree, a recipient cannot be verified or nobody can prove what happened after the handoff.
+
+This project let me own that problem from product thesis and information architecture through evidence modeling, workflow design, integrations, implementation and positioning. That is the part I value: getting close enough to the machinery that product judgment stops being abstract and the story becomes harder to fake.
+
+[GitHub profile](https://github.com/MLupu88)
+
+</td>
+</tr>
+</table>
+
+### Related work
+
+- **ChannelOS** — an AI-native operating system for a partner organization, built around relationship memory, attribution, targets and leadership reporting.
+- **[AI Agent Sudo](https://github.com/MLupu88/ai-agent-sudo)** — a provider-neutral authorization layer that returns `allow`, `deny` or `require_approval` before an agent executes a tool.
+- **[VoiceWire](https://github.com/MLupu88/voicewire)** — a local diagnostic engine combining packet/media evidence with agent traces to explain voice-AI latency and failure boundaries.
+
+---
+
+<p align="center">
+  <strong>Built to understand the system well enough to tell its story properly.</strong>
+</p>
+
+<sub>This repository is a sanitized portfolio case study, not the operational source distribution and not official DRUID product documentation. Visuals use synthetic companies, people, campaign names, activity and metrics. Product and company marks belong to their respective owners.</sub>
