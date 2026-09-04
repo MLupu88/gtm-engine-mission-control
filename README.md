@@ -73,7 +73,7 @@ Recommendations are versioned projections over current account truth, production
 
 The operator accepts, modifies or rejects that recommendation and records why. The response remains tied to the exact recommendation version it answered, so changed evidence cannot quietly inherit an old approval.
 
-An accepted next move can prepare a grounded email, LinkedIn draft or call brief. Preparation, approval, execution handoff and provider-confirmed execution remain separate states. If a real recipient cannot be verified, Mission Control does not invent one. Research, watch and no action are valid decisions too.
+An accepted next move can prepare a grounded outreach draft or call brief. Preparation, approval, execution handoff and provider-confirmed execution remain separate states. If a real recipient cannot be verified, Mission Control does not invent one. Research, watch and no action are valid decisions too.
 
 ---
 
@@ -98,10 +98,10 @@ This is not an attempt to force anonymous GA4 sessions into named accounts or cl
 Mission Control is connected to operational systems, but it does not flatten them into a row of interchangeable “integrations.” Each one contributes a specific kind of context or receives a specific kind of approved output.
 
 <p align="center">
-  <img src="./assets/gtm-stack.svg" alt="Recognizable GTM systems including HubSpot, RB2B, Google Analytics, Google Sheets, n8n and LinkedIn arranged around one canonical account" width="100%">
+  <img src="./assets/gtm-stack.svg" alt="Recognizable GTM systems including HubSpot, RB2B, Google Analytics, n8n and LinkedIn Ads arranged around one canonical account" width="100%">
 </p>
 
-HubSpot remains the CRM. Google Analytics remains the aggregate traffic authority. RB2B contributes identifiable activity. Client Radar contributes research evidence. n8n orchestrates ingestion and refresh. LinkedIn execution remains a supervised handoff rather than an invisible autonomous action.
+HubSpot remains the CRM. Google Analytics remains the aggregate traffic authority. RB2B contributes identifiable activity. Client Radar contributes research evidence. n8n orchestrates ingestion and refresh. **LinkedIn Ads belongs on the acquisition side of this story:** its campaign and UTM context can travel with identifiable activity, but this README does not claim a direct LinkedIn Ads API integration.
 
 <details>
 <summary><strong>Current integration roles</strong></summary>
@@ -112,15 +112,14 @@ HubSpot remains the CRM. Google Analytics remains the aggregate traffic authorit
 | **RB2B + n8n** | Identifiable website activity, person/company resolution and production ingestion orchestration. |
 | **Client Radar** | On-demand company research with persisted requests, returned evidence and completed-result inspection. |
 | **Google Analytics 4** | Aggregate website and campaign traffic, intentionally separate from named-account activity. |
-| **Google Sheets** | Transitional campaign-reporting and operational interchange. |
+| **LinkedIn Ads** | Campaign/source context carried through captured UTM or campaign evidence; direct Ads API connectivity is not claimed. |
 | **Tavily** | Restricted ingestion of DRUID’s own public material for reviewed product knowledge. |
 | **DeepSeek** | Bounded Account Brain and selected-period interpretation over controlled evidence. |
-| **LinkedIn / Dripify** | Supervised export-and-import workflow for approved outreach rows. |
 | **Clawd** | Separate consumer of immutable, explicitly approved execution handoffs. |
 
 </details>
 
-Provider neutrality does not mean pretending every provider is already connected. Dealfront, Cognism, PostHog, Salesforge and broad autonomous channel execution are not presented here as current capabilities.
+The repository still contains an older Sheets-sourced outbound-reporting path and manual Dripify-era export logic. Those are legacy surfaces, not the current Mission Control product thesis, so they are not presented as core integrations. Provider neutrality also does not mean pretending every planned provider is already connected: Dealfront, Cognism, PostHog and Salesforge are not presented here as current capabilities.
 
 ---
 
@@ -146,9 +145,9 @@ Decisions, actions and outcomes become part of the account’s operating history
   <img src="./assets/reporting-outputs.svg" alt="A synthetic campaign report with account decisions and outcomes plus PDF and operational CSV outputs" width="100%">
 </p>
 
-Mission Control can assemble a campaign-period view spanning accounts requiring attention, recommendations, human decisions, actions, outcomes, cost status, attribution coverage and explicit data limitations. The same operating context can become a readable PDF for leadership or an operational CSV for execution and analysis.
+The current Reports surface keeps **GA4 aggregate traffic** and **canonical identified-touch history** visibly separate. It also retains a demoted legacy outbound-reporting packet with PDF and CSV exports. That older packet keeps its source and limitations; it is not silently promoted into canonical account truth.
 
-The useful point is not the file format. **Reporting becomes an output of operating the system instead of a second account story rebuilt for the meeting.**
+The product direction is to generate leadership and operational reporting from the same canonical campaign → lead → account → decision → outcome history used by Mission Control. The useful point is not the file format. **Reporting should become an output of operating the system instead of a second account story rebuilt for the meeting.**
 
 ---
 
@@ -176,7 +175,7 @@ Observation is not truth. Assessment is not recommendation. Recommendation is no
 
 ## A working product with a clear frontier
 
-Mission Control is already a working internal product, not a static concept prototype. The account model, evidence lifecycle, ICP evaluation, deterministic recommendations, operator decisions, grounded preparation, explicit handoffs and reporting outputs form the current operating spine.
+Mission Control is already a working internal product, not a static concept prototype. The account model, evidence lifecycle, ICP evaluation, deterministic recommendations, operator decisions, grounded preparation, explicit handoffs, GA4 reporting and canonical touch history form the current operating spine.
 
 <p align="center">
   <img src="./assets/product-frontier.svg" alt="The operating Mission Control product spine, the campaign and feedback loop being deepened, and the capabilities deliberately not claimed" width="100%">
