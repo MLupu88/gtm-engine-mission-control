@@ -23,7 +23,7 @@
   <text x="576" y="500" class="small">Ad click</text><text x="683" y="500" class="small">Page visits</text><text x="816" y="500" class="small">Lead identified</text><text x="954" y="500" class="small">Decision</text>
   <rect x="558" y="535" width="484" height="54" rx="14" fill="#143824"/><text x="582" y="569" class="body" font-weight="720">Northstar Health · 3 active days · 1 lead</text>
   <rect x="1104" y="274" width="424" height="344" rx="22" fill="#0d1b15" stroke="#244032"/>
-  <text x="1136" y="319" class="label amber">MISSION CONTROL</text><text x="1136" y="357" font-size="27" font-weight="750">What should happen next?</text><text x="1136" y="390" class="small muted">Campaign context informs the decision;</text><text x="1136" y="412" class="small muted">it does not manufacture attribution.</text>
+  <text x="1136" y="319" class="label amber">GTM ACTION WEB</text><text x="1136" y="357" font-size="27" font-weight="750">What should happen next?</text><text x="1136" y="390" class="small muted">Campaign context informs the decision;</text><text x="1136" y="412" class="small muted">it does not manufacture attribution.</text>
   <text x="1136" y="448" class="label muted">ACCOUNT RESULT</text><text x="1136" y="484" class="body" font-weight="730">Pursue with context</text><text x="1136" y="516" class="small muted">Operator accepted · Email prepared</text><path d="M1136 543h360" stroke="#244032"/><text x="1136" y="578" class="small muted">Outcome awaiting confirmation</text>
   <text x="72" y="670" class="body muted">GA4 remains the source of truth for aggregate traffic. Campaign-linked account evidence stays separate until identity and provenance are defensible.</text><text x="1324" y="704" class="small muted">Synthetic portfolio data</text>
 </svg>
