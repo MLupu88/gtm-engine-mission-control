@@ -199,11 +199,15 @@ The main work now is improving the connection from campaign to known lead and ac
 
 ### Mihail Lupu
 
-I work in product marketing and have spent more than a decade around automation, conversational AI and generative AI. I also teach design thinking for GenAI at the Bucharest University of Economic Studies.
+I work in product marketing, and projects like GTM Action Web are how I make myself earn stronger opinions about technical products. I have spent more than a decade around automation, conversational AI and generative AI, and I teach design thinking for GenAI at the Bucharest University of Economic Studies.
 
-I built GTM Action Web because “connect the data, score the account and let AI recommend an action” stops sounding simple as soon as identity is uncertain, sources disagree or nobody can confirm what happened after the handoff.
+I do not find “marketer who can code” particularly interesting as an identity. The useful part is getting close enough to the system that product decisions, data choices, UX trade-offs and positioning stop being abstract.
 
-I worked on the product model, information architecture, data rules, workflows, integrations, implementation and positioning. It is a useful example of how I approach a real product problem across both product and technical decisions.
+GTM Action Web started with a practical question: when paid or organic activity brings someone to the website, can we tell which account is moving and what marketing or sales should do next? Building it exposed the harder questions behind that simple idea: how certain are we about identity, how do visits from several people become one account story, how should the account be assessed across multiple ICPs, who decides the action, and how do we record what happened afterwards?
+
+That is why it belongs here. I worked across the product model, information architecture, data rules, workflows, integrations, implementation and positioning.
+
+> **Understanding the system makes the product story better. Building the system makes the opinions harder to fake.**
 
 [GitHub profile](https://github.com/MLupu88)
 
