@@ -2,9 +2,9 @@
 
 # GTM Action Web
 
-### **The account-level decision layer between website activity and GTM action**
+### **Turn website activity into clear marketing and sales actions**
 
-**Know which accounts are moving—and whether marketing or sales should act next.**
+**See which accounts are active, why they matter, and what to do next.**
 
 </div>
 
@@ -12,11 +12,11 @@
   <img src="./assets/gtm-action-web.gif" alt="Animated GTM Action Web journey from paid and organic website activity through identity resolution, account understanding, ICP evaluation, a human-approved marketing or sales decision, and result capture" width="100%">
 </p>
 
-GTM Action Web takes behavioral signals from paid and organic website traffic, keeps the campaign, source and content context attached, and resolves the company or person behind the activity when the evidence supports it. It then combines that behavior with activity from other people at the same organization, CRM context and research to build one current account picture.
+GTM Action Web brings together paid and organic website activity, campaign data, identified visitors, CRM information and research. When a visitor or company can be identified with enough evidence, the activity is added to that account alongside activity from other people at the same organization.
 
-That account—not an isolated click or lead—is evaluated against a versioned ICP and current intent evidence. GTM Action Web recommends the next appropriate move for marketing or sales, a person decides whether it should happen, and the result becomes part of the account history.
+The system then checks how well the account matches the available ICPs and whether its recent activity suggests intent. It recommends a next step for marketing or sales, but a person decides whether to proceed. The decision and any later result stay with the account.
 
-**It is not scoring one visit and calling it buying intent. It is turning multiple pieces of evidence into an explainable account-level decision.**
+**One visit is not treated as buying intent. The recommendation comes from the account’s combined evidence.**
 
 <div align="center">
 
@@ -26,85 +26,85 @@ That account—not an isolated click or lead—is evaluated against a versioned 
 
 ---
 
-## The missing layer between traffic and action
+## Why I built it
 
-Website analytics could show that traffic increased. Campaign platforms could show which message or asset earned a click. De-anonymization could sometimes identify a visitor or company. HubSpot could show what sales already knew. Yet the operator still had to assemble those fragments manually before answering the question that mattered:
+Website analytics showed traffic, campaign platforms showed clicks, visitor-identification tools sometimes named a person or company, and HubSpot showed contacts, owners and opportunities. Each tool answered its own question, but someone still had to put everything together before deciding what to do.
 
 > **What is actually happening at this account, and what should we do about it now?**
 
-GTM Action Web grew around that gap. It connects campaign and content context to identifiable behavior, groups supported activity around the canonical account, evaluates the resulting account against the appropriate ICP and turns that assessment into work. Strong fit and meaningful intent may call for sales review, an owner alert or prepared outreach. Earlier or incomplete evidence may call for marketing nurture, research, retargeting or simply watching the account. No action is also a legitimate decision.
+GTM Action Web does that work once and keeps the result current. It connects campaign and content data to identified behavior, groups activity by account, checks the account against the appropriate ICP and suggests what should happen next. Strong fit and recent activity may lead to sales review, an owner alert or prepared outreach. Earlier or incomplete activity may lead to nurture, research, retargeting or simply watching the account.
 
-It is not a CRM replacement, a lead-scoring dashboard or an AI layer performing confidence over messy data. **The account is the center of the model—not the event, the lead or the vendor that produced it.**
+It does not replace the CRM, analytics or campaign tools. It sits between them and the people expected to act. The account is the center because one company’s story often involves several people, visits and systems.
 
 ---
 
-## One account, even when the evidence arrives in pieces
+## One account, even when signals arrive separately
 
-A campaign touch, a return visit, an identified person, a company property and an open opportunity may all describe the same commercial story. They are not automatically the same kind of truth.
+A campaign click, a return visit, an identified person and an open opportunity may all belong to the same account. They still come from different sources and should not automatically be treated as equally reliable.
 
 <p align="center">
-  <img src="./assets/account-story.gif" alt="An animated account story in which campaign activity, website behavior, identity and CRM context accumulate around one canonical account" width="100%">
+  <img src="./assets/account-story.gif" alt="An animated account story in which campaign activity, website behavior, identity and CRM context come together around one account" width="100%">
 </p>
 
-GTM Action Web keeps the source and timestamp of each observation, resolves identity explicitly and reconciles comparable facts before they become the current account picture. New evidence can strengthen the story, expose a conflict or leave an important question unanswered. Missing context is allowed to remain missing.
+GTM Action Web keeps the source and time of each observation. It records how a visitor was matched to a person or company and compares overlapping facts before updating the account. New evidence may confirm something, contradict it or leave the question open. If information is missing, the product shows it as unknown.
 
-That is the structural difference. The product does not simply collect signals. It gives them somewhere durable to accumulate and rules for becoming operationally useful.
+This gives separate signals somewhere useful to accumulate without hiding where they came from.
 
 ---
 
 ## From movement to action
 
-The operator does not begin with ingestion health or a wall of metrics. The Daily Brief begins with movement: which canonical accounts changed, what caused the change and which ones now need a decision.
+The Daily Brief starts with the accounts that changed, what caused the change and which ones now need a decision. Data-ingestion details remain available, but they are not the first thing the user sees.
 
 <p align="center">
   <img src="./assets/operator-journey.svg" alt="A four-scene operator journey from Daily Brief to account understanding, human decision and confirmed result" width="100%">
 </p>
 
-Opening an account reveals the commercial story behind the movement: current company and CRM truth, verified people across the organization, recent activity, campaign and content context, ICP assessment, missing evidence and the provenance behind each claim. The official evaluation uses the relevant published ICP version; another profile can be tested as a preview without quietly replacing production truth.
+Opening an account shows the current company and CRM information, identified people, recent activity, campaign context, ICP assessment, missing information and the source behind each item. The official evaluation uses a published ICP version. A user can test another ICP as a preview without changing the official result.
 
-The queues follow the job in front of the person—**decide, prepare, research or watch**—rather than asking them to translate another abstract score into work.
+The Actions page groups accounts by the work required: **decide, prepare, research or watch**. The user does not have to translate a score into a task.
 
 ---
 
-## The system recommends. The operator decides.
+## Recommendations still require a person
 
 <p align="center">
   <img src="./assets/decision-surface.svg" alt="A synthetic account decision surface with current account state, an explainable recommendation, missing context and explicit human decision controls" width="100%">
 </p>
 
-Recommendations are versioned projections over current account truth, production ICP evaluation, verified people and unresolved review items. They show the proposed posture, supporting reasons, blockers, confidence and the next safe step.
+A recommendation uses the current account data, the official ICP evaluation, identified people and any unresolved review items. It shows the suggested route, the reasons behind it, anything blocking action and the proposed next step.
 
-The operator accepts, modifies or rejects that recommendation and records why. The response remains tied to the exact recommendation version it answered, so changed evidence cannot quietly inherit an old approval.
+The user can accept, change or reject it and record why. That response stays linked to the exact recommendation it answered, so a later recommendation cannot inherit an earlier approval by accident.
 
-An accepted next move can prepare a grounded outreach draft or call brief. Preparation, approval, execution handoff and provider-confirmed execution remain separate states. If a real recipient cannot be verified, GTM Action Web does not invent one. Research, watch and no action are valid decisions too.
+An accepted next step can prepare an outreach draft or call brief using the account evidence. Preparation, approval, handoff and confirmed execution remain separate. If the recipient cannot be verified, the workflow stops rather than guessing. Research, watch and no action are also valid choices.
 
 ---
 
-## Campaign tracking and GA4 answer different questions
+## GA4 and account activity answer different questions
 
-GA4 is the source of truth for aggregate website traffic: reach, sessions, users and engagement across anonymous and known visitors. It cannot, by itself, create One Account Truth.
+GA4 measures total website traffic: reach, sessions, users and engagement across anonymous and known visitors. It cannot tell the full story of a named account by itself.
 
-Campaign and UTM context therefore travel separately with identifiable behavioral evidence when that evidence can be defensibly associated with a lead, person or canonical account.
+Campaign and UTM data stay attached to identified activity when the system can reliably connect that activity to a lead, person or account.
 
 <p align="center">
   <img src="./assets/campaign-account-outcome.svg" alt="A synthetic view of GA4 aggregate traffic alongside campaign-linked account evidence and a GTM Action Web decision" width="100%">
 </p>
 
-The product direction is to carry a campaign beyond top-of-funnel reporting: **which known leads and accounts arrived, which assets they engaged with, how interest accumulated across the organization, which ICP they fit, what GTM Action Web recommended, what a person chose and which outcomes were later confirmed**.
+The goal is to follow a campaign beyond traffic totals: **which known leads and accounts arrived, what they looked at, whether several people from the account became active, which ICP matched, what the system recommended and what happened afterward**.
 
-This is not an attempt to force anonymous GA4 sessions into named accounts or claim universal multi-touch attribution. Aggregate performance and account-bound evidence stay distinct until identity and provenance can support the connection.
+Anonymous GA4 sessions are not forced into named accounts, and the product does not claim universal multi-touch attribution. Aggregate traffic and identified account activity remain separate until the connection can be supported.
 
 ---
 
-## The GTM stack keeps its job. The account gains a memory.
+## How the tools fit together
 
-GTM Action Web is connected to operational systems, but it does not flatten them into a row of interchangeable “integrations.” Each one contributes a specific kind of context or receives a specific kind of approved output.
+Each connected system keeps a specific role. GTM Action Web brings the useful parts together around the account rather than trying to replace the original tools.
 
 <p align="center">
-  <img src="./assets/gtm-stack.svg" alt="Recognizable GTM systems including HubSpot, RB2B, Google Analytics, n8n and LinkedIn Ads arranged around one canonical account" width="100%">
+  <img src="./assets/gtm-stack.svg" alt="Recognizable GTM systems including HubSpot, RB2B, Google Analytics, n8n and LinkedIn Ads feeding one account view" width="100%">
 </p>
 
-HubSpot remains the CRM. Google Analytics remains the aggregate traffic authority. RB2B contributes identifiable activity. Client Radar contributes research evidence. n8n orchestrates ingestion and refresh. **LinkedIn Ads belongs on the acquisition side of this story:** its campaign and UTM context can travel with identifiable activity, but this README does not claim a direct LinkedIn Ads API integration.
+HubSpot provides CRM context. Google Analytics provides aggregate traffic. RB2B contributes identified website activity. Client Radar contributes research. n8n handles ingestion and refresh. LinkedIn Ads campaign and UTM data can travel with captured activity, but there is no direct LinkedIn Ads API integration today.
 
 <details>
 <summary><strong>Current integration roles</strong></summary>
@@ -117,52 +117,52 @@ HubSpot remains the CRM. Google Analytics remains the aggregate traffic authorit
 | **Google Analytics 4** | Aggregate website and campaign traffic, intentionally separate from named-account activity. |
 | **LinkedIn Ads** | Campaign/source context carried through captured UTM or campaign evidence; direct Ads API connectivity is not claimed. |
 | **Tavily** | Restricted ingestion of the company’s own public material for reviewed product knowledge. |
-| **DeepSeek** | Bounded Account Brain and selected-period interpretation over controlled evidence. |
+| **DeepSeek** | Limited Account Brain and period summaries based on evidence already in the product. |
 | **Clawd** | Separate consumer of immutable, explicitly approved execution handoffs. |
 
 </details>
 
-The operational repository still contains an older Sheets-sourced outbound-reporting path and manual Dripify-era export logic. Those are legacy surfaces, not the current GTM Action Web product thesis, so they are not presented as core integrations. Provider neutrality also does not mean pretending every planned provider is already connected: Dealfront, Cognism, PostHog and Salesforge are not presented here as current capabilities.
+The operational repository still contains an older Google Sheets reporting path and manual Dripify export logic. These are legacy features, not core integrations. Dealfront, Cognism, PostHog and Salesforge are also not presented as current capabilities.
 
 ---
 
-## AI makes the history readable. It does not decide the truth.
+## Where AI helps
 
-GTM Action Web currently gives AI two jobs where language is genuinely useful.
+AI currently has two limited jobs in the product.
 
-The **Account Brain** compresses a complicated account history into a readable explanation of why the account matters now. The **Period Brief** summarizes what changed across the selected reporting window. Both work over evidence the system already has and point the operator back toward that evidence.
+The **Account Brain** summarizes why an account may matter now. The **Period Brief** summarizes what changed during a selected period. Both use information already stored in the system and link the user back to the supporting evidence.
 
 <p align="center">
   <img src="./assets/ai-role.svg" alt="GTM Action Web AI turning controlled account evidence into an Account Brain explanation and a reporting-period brief while deterministic systems retain authority" width="100%">
 </p>
 
-The model does not resolve identity, promote observations into canonical truth, perform the official ICP evaluation, choose recommendation policy or authorize execution. In practical terms: **AI reduces the reading burden; it does not acquire decision rights.**
+The model does not resolve identity, update verified account facts, perform the official ICP evaluation, choose the recommendation rules or approve execution. It helps the user read the history; it does not make the final decision.
 
 ---
 
-## The loop does not end at outreach
+## Decisions and results stay with the account
 
-Decisions, actions and outcomes become part of the account’s operating history rather than disappearing into another tool after the click.
+The product records what was recommended, what the user chose, what was handed off and what was later confirmed.
 
 <p align="center">
   <img src="./assets/reporting-outputs.svg" alt="A synthetic campaign report with account decisions and outcomes plus PDF and operational CSV outputs" width="100%">
 </p>
 
-The current Reports surface keeps **GA4 aggregate traffic** and **canonical identified-touch history** visibly separate. It also retains a demoted legacy outbound-reporting packet with PDF and CSV exports. That older packet keeps its source and limitations; it is not silently promoted into canonical account truth.
+The current Reports page keeps **GA4 traffic** separate from **identified account activity**. It also includes an older outbound report with PDF and CSV exports. That report shows its source and limitations rather than presenting the data as verified account history.
 
-The product direction is to generate leadership and operational reporting from the same canonical campaign → lead → account → decision → outcome history used by GTM Action Web. The useful point is not the file format. **Reporting should become an output of operating the system instead of a second account story rebuilt for the meeting.**
+The next step is to build leadership and operational reports from the same campaign → lead → account → decision → outcome history used in the product. This should remove the need to reconstruct the account story again for a report or meeting.
 
 ---
 
-## Under the product surface
+## How it works
 
 The implementation is a TypeScript monorepo with a React/Vite operator workspace, an Express API, PostgreSQL with Drizzle, explicit contracts and pure packages for identity, observations, reconciliation and evaluation.
 
 <p align="center">
-  <img src="./assets/truth-lifecycle.svg" alt="The evidence lifecycle from provider observation through identity, canonical truth, assessment, recommendation, human decision and confirmed result" width="100%">
+  <img src="./assets/truth-lifecycle.svg" alt="How source evidence moves through identity matching, account facts, assessment, recommendation, human decision and confirmed result" width="100%">
 </p>
 
-The important technical decisions are the boundaries, not the framework names:
+The implementation keeps several responsibilities separate:
 
 - provider-specific payloads stop at adapters;
 - identity resolution and idempotency are deterministic;
@@ -172,19 +172,19 @@ The important technical decisions are the boundaries, not the framework names:
 - database constraints protect important lifecycle and immutability rules beneath the UI;
 - browser, ingestion and execution-consumer routes have separate authorization boundaries.
 
-Observation is not truth. Assessment is not recommendation. Recommendation is not authorization. Handoff is not a confirmed result. The product remains useful because those distinctions survive the full workflow.
+These boundaries prevent a raw observation from becoming a verified fact, an assessment from becoming an automatic action, or a handoff from being reported as a completed result.
 
 ---
 
-## A working product with a clear frontier
+## What works today—and what comes next
 
-GTM Action Web is already a working internal product, not a static concept prototype. The account model, evidence lifecycle, ICP evaluation, deterministic recommendations, operator decisions, grounded preparation, explicit handoffs, GA4 reporting and canonical touch history form the current operating spine.
+GTM Action Web is a working internal product. It already supports account records, source-backed evidence, identity resolution, ICP evaluation, recommendations, user decisions, prepared actions, approval handoffs, GA4 reporting and identified activity history.
 
 <p align="center">
-  <img src="./assets/product-frontier.svg" alt="The operating GTM Action Web product spine, the campaign and feedback loop being deepened, and the capabilities deliberately not claimed" width="100%">
+  <img src="./assets/product-frontier.svg" alt="What GTM Action Web supports today, what is being built next, and what the product does not claim" width="100%">
 </p>
 
-The active frontier is continuity: following defensible campaign context into a known lead and account, then carrying the human decision through approved execution to a confirmed outcome. That is where the product becomes more than a better prioritization surface—it becomes a learning GTM operating loop.
+The main work now is improving the connection from campaign to known lead and account, then from an approved action to a confirmed result. Campaign setup and consolidated account-based reporting are not finished yet.
 
 ---
 
@@ -201,9 +201,9 @@ The active frontier is continuity: following defensible campaign context into a 
 
 I work in product marketing and have spent more than a decade around automation, conversational AI and generative AI. I also teach design thinking for GenAI at the Bucharest University of Economic Studies.
 
-I built GTM Action Web because I wanted to get past the easy version of the GTM story. “Connect the data, score the account, let AI recommend an action” sounds convincing until identity is uncertain, sources disagree, a recipient cannot be verified or nobody can prove what happened after the handoff.
+I built GTM Action Web because “connect the data, score the account and let AI recommend an action” stops sounding simple as soon as identity is uncertain, sources disagree or nobody can confirm what happened after the handoff.
 
-This project let me own that problem from product thesis and information architecture through evidence modeling, workflow design, integrations, implementation and positioning. That is the part I value: getting close enough to the machinery that product judgment stops being abstract and the story becomes harder to fake.
+I worked on the product model, information architecture, data rules, workflows, integrations, implementation and positioning. It is a useful example of how I approach a real product problem across both product and technical decisions.
 
 [GitHub profile](https://github.com/MLupu88)
 
@@ -218,9 +218,5 @@ This project let me own that problem from product thesis and information archite
 - **[VoiceWire](https://github.com/MLupu88/voicewire)** — a local diagnostic engine combining packet/media evidence with agent traces to explain voice-AI latency and failure boundaries.
 
 ---
-
-<p align="center">
-  <strong>Built to understand the system well enough to tell its story properly.</strong>
-</p>
 
 <sub>This repository is a sanitized portfolio case study, not the operational source distribution or official company documentation. Visuals use synthetic companies, people, campaign names, activity and metrics. Product and company marks belong to their respective owners.</sub>
